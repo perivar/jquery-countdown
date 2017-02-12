@@ -1,7 +1,7 @@
 # jQuery Countdown
 
 jQuery Countdown is a countdown library with an amazing animation. Take a look
-at the [demonstration http://reflejo.github.com/jquery-countdown/
+at the [demonstration] https://perivar.github.io/
 
 Now you can download the PSD file
 [here] https://github.com/Reflejo/jquery-countdown/blob/master/img/digits.psd
@@ -71,4 +71,5 @@ https://github.com/perivar/jquery-countdown
 
 ### Demo
 
-Look at the [demo] http://reflejo.github.com/jquery-countdown/
+Look at the [demo] https://perivar.github.io/
+ 
