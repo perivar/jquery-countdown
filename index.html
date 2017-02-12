@@ -1,28 +1,48 @@
-<!DOCTYPE>
 <html>
-  <head>
+<head>
     <title>jquery-countdown plugin test</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-    <script src="js/jquery.countdown.js"></script>
     <link href="css/media.css" rel="stylesheet" type="text/css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/jquery.countdown.clean.js"></script>
     <script>
-      $(function(){
-        $(".digits").countdown({
-          image: "img/digits.png",
-          format: "dd:hh:mm:ss",
-          endTime: new Date(2013, 12, 2)
+        $(function() {
+
+            $('#counter1').countdown({
+                stepTime: 60,
+                format: 'hh:mm:ss',
+                startTime: "10:30:00",
+                timerEnd: function() {
+                    alert('counter 1 end!!');
+                },
+                image: "https://raw.github.com/Reflejo/jquery-countdown/master/img/digits.png"
+            });
+
+            $('#counter2').countdown({
+                stepTime: 60,
+                digitWidth: 34,
+                digitHeight: 45,
+                format: 'hh:mm:ss',
+                startTime: "00:00:10",
+                timerEnd: function() {
+                    alert('counter 2 end!!');
+                },
+                image: "http://s21.postimg.org/nfgjv6b7r/digits2.png"
+            });
+
+            $('#counter3').countdown({
+                image: "img/digits.png",
+                format: "hh:mm:ss",
+                endTime: new Date('2017/02/12 19:00:00'),
+                timerEnd: function() {
+                    alert('counter 3 end!!');
+                }
+            });
         });
-      });
     </script>
-  </head>
-  <body>
-    <a href="https://github.com/Reflejo/jquery-countdown"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png" alt="Fork me on GitHub"></a>
-    <div class="wrapper">
-      <div class="cell">
-        <div id="holder">
-          <div class="digits"></div>
-        </div>
-      </div>
-    </div>
-  </body>
+</head>
+<body>
+    <div id='counter1'></div>
+    <div id='counter2'></div>
+    <div id='counter3'></div>
+</body>
 </html>
